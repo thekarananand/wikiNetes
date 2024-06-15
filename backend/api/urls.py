@@ -7,3 +7,13 @@ urlpatterns = [
     path('ping/', views.getRoutes, name='getPing' ),
     path('input/', views.createPing, name='createPing' ),
 ]
+
+"""
+Planned RestfulAPI Routes
+
+GET     /articles/
+POST    /articles/new/
+GET     /articles/id/
+PUT     /articles/id/
+DELETE  /articles/id/
+"""
