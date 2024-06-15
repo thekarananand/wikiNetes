@@ -1,7 +1,8 @@
+// Styling
 import "./page.style.css";
 
 // UI Components
-import Ping from "@/components/Ping";
+import Ping  from "@/components/Ping";
 import Input from "@/components/Input";
 
 export default function Home() {

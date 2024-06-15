@@ -9,6 +9,9 @@ import "./Input.style.css";
 // Runtime Varibles
 import BackendAPI from "@/runtime_variables/BackendAPI";
 
+// Fonts
+import { jetbrain_mono } from "@/fonts/Jetbrains_Mono";
+
 const Input = () => {
 
     let [res, setRes] = useState("{}");
@@ -47,6 +50,7 @@ const Input = () => {
                 <input
                     name="Input"
                     type="text"
+                    className={ jetbrain_mono.className }
                     value={ input }
                     onChange={
                         (e) => setInput(e.target.value)
@@ -56,7 +60,9 @@ const Input = () => {
                 >Send</button>
             </div>
 
-            { res }
+            <div
+                className={ jetbrain_mono.className }
+            >{ res }</div>
         </div>
     );
 

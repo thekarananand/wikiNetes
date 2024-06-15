@@ -1,8 +1,12 @@
+// Next Components
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
+// Global Styling
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// Fonts
+import { inter } from "@/fonts/Inter";
+import { jetbrain_mono } from "@/fonts/Jetbrains_Mono";
 
 export const metadata: Metadata = {
     title: "WikiNetes",
