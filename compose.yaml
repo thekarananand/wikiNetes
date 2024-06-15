@@ -1,0 +1,17 @@
+services:
+
+  frontend:
+    container_name: wikinetes-frontend
+    build: ./frontend
+    ports:
+      - 8000:3000
+    depends_on:
+      - backend
+    # command: ["sleep", "10000"]
+
+  backend:
+    container_name: wikinetes-backend
+    build: ./backend
+    ports:
+      - 8001:8000
+    # command: ["sleep", "10000"]
