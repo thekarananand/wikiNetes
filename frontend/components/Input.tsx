@@ -19,9 +19,11 @@ const Input = () => {
 
     useEffect( () => {
         const getInputValue = async () => {
-            let response = await fetch( BackendAPI + "/input/");
+            let response = await fetch( BackendAPI + "/ping/", {
+                mode: "cors"
+            });
             let value_responce = await response.json();
-            setInput(value_responce?.Value);
+            setInput(value_responce?.Ping);
         };
 
         getInputValue();
@@ -29,6 +31,7 @@ const Input = () => {
 
     const sendResponse = async () => {
         let response = await fetch( BackendAPI + "/input/",  {
+            mode: "cors",
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",

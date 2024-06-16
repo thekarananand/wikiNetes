@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
-from .ConnectionConfig import cors_origin_list
+from .ConnectionConfig import debug_status, allowed_host_list, cors_origin_list
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!84z31k85hcbnk8ivdelv2odr0f_c6iafn+3y@a-z0lu11oax9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = debug_status
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = allowed_host_list
 
 
 # Application definition
@@ -136,4 +136,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS SETUP
-CORS_ALLOWED_ORIGINS = cors_origin_list
+CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOWED_ORIGINS = cors_origin_list
+
+# CSRF_TRUSTED_ORIGINS = cors_origin_list
+
+# DRF CONFIG
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}

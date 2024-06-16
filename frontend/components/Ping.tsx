@@ -1,7 +1,5 @@
-"use client";
-
 // React Hooks
-import { useState } from "react";
+// import { useState } from "react";
 
 // Styling
 import "./Ping.style.css";
@@ -9,17 +7,15 @@ import "./Ping.style.css";
 // Runtime Varibles
 import BackendAPI from "@/runtime_variables/BackendAPI";
 
-const Ping = () => {
-
-    let [status, setStatus] = useState("Error");
+const Ping = async () => {
 
     const getStatus = async () => {
-        let response = await fetch( BackendAPI + "/ping" );
+        let response = await fetch( BackendAPI + "/ping/" );
         let status_responce = await response.json();
-        setStatus(status_responce?.Ping);
+        return status_responce?.Ping;
     };
 
-    getStatus();
+    let status = await getStatus();
     
     return (
         <div className="ping">
