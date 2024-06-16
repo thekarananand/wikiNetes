@@ -1,4 +1,4 @@
-debug_status = True
+debug_status = False
 
 allowed_host_list = [ '*' ]
 
