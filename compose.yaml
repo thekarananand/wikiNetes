@@ -28,8 +28,6 @@ services:
       - frontend
     networks:
       - wikinetes
-    environment:
-      - FF_OPEN_URL="http://wikinetes-frontend:3000/"
   
 networks:
   wikinetes:
