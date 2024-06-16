@@ -8,6 +8,6 @@ COPY . /opt/wikiNetes/frontend
 WORKDIR /opt/wikiNetes/frontend
 
 RUN npm install
-RUN npm run build
+RUN chmod +x runScript.sh
 
-CMD [ "npm", "run", "start" ]
+CMD [ "./runScript.sh" ]

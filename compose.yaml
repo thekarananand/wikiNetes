@@ -1,5 +1,13 @@
 services:
 
+  backend:
+    container_name: wikinetes-backend
+    build: ./backend
+    ports:
+      - 8000:8000
+    networks:
+      - wikinetes
+
   frontend:
     container_name: wikinetes-frontend
     build: ./frontend
@@ -10,24 +18,18 @@ services:
     networks:
       - wikinetes
 
-
-  backend:
-    container_name: wikinetes-backend
-    build: ./backend
-    ports:
-      - 8000:8000
-    networks:
-      - wikinetes
-  
   firefox:
     container_name: test-user
     image: jlesage/firefox
     ports:
       - 5800:5800
+    depends_on:
+      - backend
+      - frontend
     networks:
       - wikinetes
-    volumes:
-      - ./.firefox:/config:rw
+    environment:
+      - FF_OPEN_URL="http://wikinetes-frontend:3000/"
   
 networks:
   wikinetes:
