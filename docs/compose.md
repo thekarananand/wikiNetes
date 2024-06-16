@@ -16,4 +16,4 @@ cd ./wikiNetes
 docker compose up -d --build
 ```
 
-**Step 3**: Connect to the Containerized Firefox Instance ( [localhost:5800](http://localhost:5800/) )
+**Step 3**: Go to [localhost:5800](http://localhost:5800/) i.e., Containerized Firefox Instance
