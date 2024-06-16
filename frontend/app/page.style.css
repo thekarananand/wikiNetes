@@ -2,11 +2,6 @@
     display: block;
 }
 
-.ping {
-    font-weight: 400;
-    display: block;
-}
-
 .main {
     display: flex;
     flex-direction: column;

@@ -2,15 +2,19 @@
 import "./page.style.css";
 
 // UI Components
-import Ping  from "@/components/Ping";
-import Input from "@/components/Input";
+import TestServerSideRender from "@/components/status/TestServerSideRender";
+import TestClientSideRender from "@/components/status/TestClientSideRender";
+import TestDBConnect        from "@/components/status/TestDBConnect";
 
 export default function Home() {
     return (
         <main className="main">
             <h1 className="page-heading">Wikinetes</h1>
-            <Ping/>
-            <Input/>
+            <ul>
+                <TestServerSideRender id={ 1 } />
+                <TestClientSideRender id={ 2 } />
+                <TestDBConnect        id={ 3 } />
+            </ul>
         </main>
     );
 }
