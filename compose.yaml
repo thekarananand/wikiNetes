@@ -4,14 +4,30 @@ services:
     container_name: wikinetes-frontend
     build: ./frontend
     ports:
-      - 8000:3000
+      - 3000:3000
     depends_on:
       - backend
-    # command: ["sleep", "10000"]
+    networks:
+      - wikinetes
+
 
   backend:
     container_name: wikinetes-backend
     build: ./backend
     ports:
-      - 8001:8000
-    # command: ["sleep", "10000"]
+      - 8000:8000
+    networks:
+      - wikinetes
+  
+  firefox:
+    container_name: test-user
+    image: jlesage/firefox
+    ports:
+      - 5800:5800
+    networks:
+      - wikinetes
+    volumes:
+      - ./.firefox:/config:rw
+  
+networks:
+  wikinetes:

@@ -5,6 +5,7 @@ backend/api/migrations
 backend/api/__pycache__
 backend/api/__init__.py
 
+.firefox
 
 # dependencies
 frontend/node_modules
