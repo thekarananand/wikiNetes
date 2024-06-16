@@ -1,4 +1,20 @@
 services:
+  database:
+    container_name: mongo
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - wikinetes
+
+  database-init-container:
+    container_name: mongo-init-container
+    build: ./database
+    restart: no
+    depends_on:
+      - database   
+    networks:
+      - wikinetes
 
   backend:
     container_name: wikinetes-backend
@@ -7,6 +23,8 @@ services:
       - 8000:8000
     networks:
       - wikinetes
+    depends_on:
+      - database
 
   frontend:
     container_name: wikinetes-frontend
@@ -15,6 +33,7 @@ services:
       - 3000:3000
     depends_on:
       - backend
+      - database
     networks:
       - wikinetes
 
@@ -23,11 +42,9 @@ services:
     image: jlesage/firefox
     ports:
       - 5800:5800
-    depends_on:
-      - backend
-      - frontend
     networks:
       - wikinetes
   
 networks:
   wikinetes:
+    name: wikinetes
