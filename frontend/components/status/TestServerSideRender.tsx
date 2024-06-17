@@ -1,10 +1,13 @@
+// Styling
+import "./Test.style.css";
+
 // Runtime Varibles
 import BackendAPI from "@/runtime_variables/BackendAPI";
 
 const TestServerSideRender = async ( props: { id:number } ) => {
 
     const pingBackend = async () => {
-        let response = await fetch( BackendAPI + "/ping/backend/" );
+        let response = await fetch( BackendAPI + "/ping/backend/", { cache: "no-store" } );
         let status_responce = await response.json();
 
         if ( status_responce?.Ping === "Pong" ) {

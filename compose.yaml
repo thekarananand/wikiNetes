@@ -44,6 +44,8 @@ services:
       - 5800:5800
     networks:
       - wikinetes
+    environment:
+      - DARK_MODE=1
   
 networks:
   wikinetes:

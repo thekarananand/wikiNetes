@@ -2,17 +2,22 @@
 import Link  from "next/link";
 import Image from "next/image";
 
+// React Hooks
+
 // Styling
 import "./page.style.css";
 
 // Fonts
 
+// Runtime Varibles
+
 // UI Components
+
+
 export default function Page() {
     return (
         <main className="main">
-            <h1>wikiNetes</h1>
-            <Link href='/status/'>Status</Link>
+            Main Page
         </main>
     );
 }

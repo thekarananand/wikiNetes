@@ -1,0 +1,31 @@
+li.status-box {
+    border: 1px solid #272827;
+    background-color: hsl(200, 6%, 10%);
+
+    box-sizing: border-box;
+    padding: 0.6rem;
+
+    border-radius: 0.4rem;
+}
+
+li.status-box > span {
+    display: block;
+    width: max-content;
+    
+}
+
+li.status-box > span.title {
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+}
+
+
+li.status-box > span.status {
+    color: rgb(0, 200, 0);
+    border-radius: 0.4rem;
+    font-weight: 500;
+}
+
+li.status-box.error > span.status {
+    color: rgb(200, 0, 0);
+}
