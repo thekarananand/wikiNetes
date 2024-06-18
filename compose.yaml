@@ -37,16 +37,6 @@ services:
     networks:
       - wikinetes
 
-  firefox:
-    container_name: test-user
-    image: jlesage/firefox
-    ports:
-      - 5800:5800
-    networks:
-      - wikinetes
-    environment:
-      - DARK_MODE=1
-  
 networks:
   wikinetes:
     name: wikinetes

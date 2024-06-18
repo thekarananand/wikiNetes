@@ -16,9 +16,4 @@ cd ./wikiNetes
 docker compose up -d --build
 ```
 
-**Step 3**: Go to [localhost:5800](http://localhost:5800/) i.e., Containerized Firefox Instance
-
-**Step 4**: On the Firefox Instance (mentioned above), go to the following url
-```url
-http://wikinetes-frontend:3000/
-```
+**Step 3**: Go to [localhost:3000/status](http://localhost:3000/status), and Check, if all the components are Operation.

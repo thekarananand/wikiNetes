@@ -7,7 +7,7 @@ import { useState } from "react";
 import "./Test.style.css";
 
 // Runtime Varibles
-import BackendAPI from "@/runtime_variables/BackendAPI";
+import ClientSideEndpoint from "@/runtime_variables/ClientSideEndpoint";
 
 const TestClientSideRender = ( props: { id:number } ) => {
 
@@ -15,10 +15,10 @@ const TestClientSideRender = ( props: { id:number } ) => {
     let [code,   setCode  ] = useState( 1 );
 
     const pingBackend = async () => {
-        let response = await fetch( BackendAPI + "/ping/backend/", { cache: "no-store" } );
+        let response = await fetch( ClientSideEndpoint + "/ping/backend/", { cache: "no-store" } );
         let status_responce = await response.json();
 
-        if ( status_responce?.Ping === "Pong" ) {
+        if ( (response.ok) && (status_responce?.Ping === "Pong") ) {
             setStatus("Normal");
             setCode( 0 );
         }
