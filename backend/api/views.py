@@ -4,7 +4,8 @@ from rest_framework.decorators import api_view
 
 # from .serializer import serializeInput
 
-from .pymongo_interface import pymongo_pingDatabase
+from . import mongo
+# from . import serializer
 
 # Create your views here.
 @api_view(['GET'])
@@ -15,15 +16,13 @@ def pingBackend(request):
 
 @api_view(['GET'])
 def pingDatabase(request):
-    status = pymongo_pingDatabase()
+    status = mongo.pingDatabase()
     return Response(status)
 
-# @api_view(['GET', 'POST'])
-# def createPing(request):
-#     if request.method == 'GET':
-#         return Response({
-#         "Value": "Pong"
-#     })
+@api_view(['GET'])
+def articles(request):
+    articlesList = mongo.articlesList()
+    return Response(articlesList)
     
 #     elif request.method == 'POST':
 #         data = request.data
