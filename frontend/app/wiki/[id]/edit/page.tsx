@@ -1,6 +1,6 @@
 
 // UI Components
-import EditArticle from "@/components/index/EditArticle";
+import EditArticle from "@/components/wiki/EditArticle";
 
 export default function Page({ params }: { params: { id: string } }) {
 
