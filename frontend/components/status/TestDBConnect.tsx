@@ -16,11 +16,13 @@ const TestDBConnect = ( props: { id:number } ) => {
 
     const pingBackend = async () => {
         let response = await fetch( ClientSideEndpoint + "/ping/database/", { cache: "no-store" } );
-        let status_responce = await response.json();
         
-        if ( (response.ok) && (status_responce?.Ping === "Pong") ) {
-            setStatus("Normal");
-            setCode( 0 );
+        if ( response.ok ) {
+            let status_responce = await response.json();
+            if (status_responce?.Ping === "Pong") {
+                setStatus("Normal");
+                setCode( 0 );
+            }
         }
     };
 
