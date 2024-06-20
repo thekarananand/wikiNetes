@@ -9,8 +9,8 @@ import { inter } from "@/fonts/Inter";
 import { jetbrain_mono } from "@/fonts/Jetbrains_Mono";
 
 // UI Components
-import Header from "@/components/root/Header";
-import Footer from "@/components/root/Footer";
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
     title: "WikiNetes",

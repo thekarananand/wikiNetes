@@ -2,7 +2,7 @@
 import Link  from "next/link";
 
 // Styling
-import "./Footer.style.css";
+import "./Header.style.css";
 
 const Header = () => {
     return (

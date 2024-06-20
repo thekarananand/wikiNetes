@@ -6,13 +6,13 @@ import Image from "next/image";
 import "./page.style.css";
 
 // UI Components
-import ArticlesList from "@/components/root/ArticlesList";
+import ListArticles from "@/components/index/ListArticles";
 
 export default function Page() {
     return (
         <main className="main">
             <h1>wikiNetes</h1>
-            <ArticlesList/>
+            <ListArticles/>
         </main>
     );
 }

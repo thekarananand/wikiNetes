@@ -1,4 +1,6 @@
 from rest_framework import serializers
 
-class serializeInput(serializers.Serializer):
-    Input = serializers.CharField(required=True, max_length=24)
+class ArticleMD(serializers.Serializer):
+    title = serializers.CharField(required=True, max_length=150)
+    author = serializers.CharField(required=True, max_length=50)
+    md_content = serializers.CharField(required=True)

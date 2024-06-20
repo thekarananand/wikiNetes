@@ -2,12 +2,12 @@
 import Link from "next/link";
 
 // Styling
-import "./ArticlesList.style.css";
+import "./ListArticles.style.css";
 
 // Runtime Varibles
 import ServerSideEndpoint from "@/runtime_variables/ServerSideEndpoint";
 
-const ArticlesList = async () => {
+const ListArticles = async () => {
 
     let articleList:any = [];
 
@@ -36,4 +36,4 @@ const ArticlesList = async () => {
 
 };
 
-export default ArticlesList;
+export default ListArticles;
