@@ -11,6 +11,9 @@ const Header = () => {
                 <li>
                     <Link href='/'>Wikinetes</Link>
                 </li>
+                <li>
+                    <Link href='/contribute/new/'>Contribute</Link>
+                </li>
             </ul>
         </header>
     );

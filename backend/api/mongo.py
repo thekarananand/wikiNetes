@@ -91,3 +91,11 @@ def update(id, newData):
     new = { "$set": newData }
 
     collection_articles.update_one(old, new)
+
+def new(newData):
+
+    newData['table_of_content'] = []
+
+    id = str(collection_articles.insert_one(newData).inserted_id)
+
+    return( id )

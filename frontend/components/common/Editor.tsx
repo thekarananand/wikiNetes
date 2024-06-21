@@ -63,7 +63,7 @@ const Editor = ( props: {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)} />
 
-            <label htmlFor="author">Title</label>
+            <label htmlFor="author">Author</label>
             <input
                 name="author"
                 id="author"

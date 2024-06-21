@@ -37,6 +37,18 @@ def articles_id(request, id):
                 "id"  : id 
             })
         return Response(SerialData.errors)
+  
+@api_view(['POST'])  
+def articles_new(request):
+    SerialData = serializer.ArticleMD(data=request.data)
+
+    if SerialData.is_valid():
+        id = mongo.new( SerialData.data )
+        return Response({
+            "Ping": "Pong",
+            "id"  : id 
+        })
+    return Response(SerialData.errors)
         
 @api_view(['GET'])
 def articles_id_md(request, id):
