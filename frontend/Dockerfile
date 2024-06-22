@@ -1,7 +1,6 @@
-FROM debian:latest
+FROM alpine:latest
 
-RUN apt update
-RUN apt install npm -y
+RUN apk add npm
 
 COPY . /opt/wikiNetes/frontend
 
