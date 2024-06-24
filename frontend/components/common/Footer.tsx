@@ -6,12 +6,20 @@ import "./Footer.style.css";
 
 const Footer = () => {
     return (
-        <footer>
-            <ul>
-                <li>
-                    <Link href='/status/'>Status</Link>
-                </li>
-            </ul>
+        <footer className="footer">
+            <nav>
+                <ul>
+                    <li>
+                        <Link href={ "/status/" }>Status</Link>
+                    </li>
+                    <li>
+                        <Link href={ "/md/" }>Markdown</Link>
+                    </li>
+                    <li>
+                        <Link href={ "https://github.com/thekarananand/wikiNetes/" }>GitHub</Link>
+                    </li>
+                </ul>
+            </nav>
         </footer>
     );
 };

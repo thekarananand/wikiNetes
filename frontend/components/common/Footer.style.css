@@ -1,0 +1,32 @@
+footer.footer {
+    width: min( 
+        var(--max-width), 
+        calc( 100vw - 2 * var(--side-gap))    
+    );
+
+    margin: 0 auto;
+    background-color: hsl(var(--bg-2));
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-1000);
+}
+
+footer.footer ul {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--inner-gap);
+}
+
+footer.footer ul li {
+    padding: var(--inner-gap);
+}
+
+footer.footer nav > ul > li a{
+    color: hsl(var(--color-1));
+    text-underline-offset: 4px;
+    text-decoration: underline;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+}

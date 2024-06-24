@@ -1,6 +1,3 @@
-// Next Components
-import Link  from "next/link";
-
 // Styling
 import "./page.style.css";
 
@@ -10,9 +7,8 @@ import ArticleContent from "@/components/wiki/ArticleContent";
 export default function Page({ params }: { params: { id: string } }) {
 
     return (
-        <main>
+        <main className="articleView">
             <ArticleContent id={ params.id } />
-            <Link href={ `/wiki/${ params.id }/edit` } >Edit</Link>
         </main>
     );
 }

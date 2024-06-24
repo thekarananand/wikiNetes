@@ -62,7 +62,7 @@ def articleMD(id):
     }
 
     article = collection_articles.find_one( query, projection )
-    article.pop("table_of_content")
+    # article.pop("table_of_content")
 
     return(article)
 

@@ -1,6 +1,9 @@
 "use client";
 
 // Next Components
+import Link  from "next/link";
+
+// Next Components
 import { useRouter } from "next/navigation";
 
 // React Hooks
@@ -19,6 +22,7 @@ const Editor = ( props: {
     title       :string,
     author      :string,
     md_content  :string,
+    heading     :string,
 } ) => {
 
     const router = useRouter();
@@ -52,41 +56,59 @@ const Editor = ( props: {
     
 
     return(
-        <section className="Editor">
+        <div className="wrapper">
+            <section>
+                <div className="metadata">
+                    <h3>Metadata</h3>
+                    <label htmlFor="title">Title</label>
+                    <input
+                        name="title"
+                        id="title"
+                        type="text"
+                        className={inter.className}
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)} />
 
-            <label htmlFor="title">Title</label>
-            <input
-                name="title"
-                id="title"
-                type="text"
-                className={inter.className}
-                value={title}
-                onChange={(e) => setTitle(e.target.value)} />
-
-            <label htmlFor="author">Author</label>
-            <input
-                name="author"
-                id="author"
-                type="text"
-                className={inter.className}
-                value={author}
-                onChange={(e) => setAuthor(e.target.value)} />
-
-            <label htmlFor="md_content">Article Content</label>
-            <textarea
-                name="md_content"
-                id="md_content"
-                className={jetbrain_mono.className}
-                onChange={(e) => setMD_content(e.target.value)}
-                value={md_content}/>
-            
-            <button
-                className={inter.className + " btn"}
-                onClick={ SendReq } >
-                    Save Changes
-            </button>
-
-        </section>
+                    <label htmlFor="author">Author</label>
+                    <input
+                        name="author"
+                        id="author"
+                        type="text"
+                        className={inter.className}
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)} />
+                </div>
+                <div className="editor">
+                    <label htmlFor="md_content">Article Content</label>
+                    <textarea
+                        name="md_content"
+                        id="md_content"
+                        className={jetbrain_mono.className}
+                        onChange={(e) => setMD_content(e.target.value)}
+                        value={md_content}/>
+                </div>
+            </section>
+            <aside>
+                <div className="option-bar">
+                    <h3>Actions</h3>
+                    <button
+                        className={inter.className + " btn"}
+                        onClick={ SendReq } >
+                            Save Changes
+                    </button>
+                </div>
+                <div className="related-bar">
+                    <h3>Related Links</h3>
+                    <ul>
+                        <li>
+                            <Link href={ "/md" }>
+                                Markdown Support
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
     );
     
 };

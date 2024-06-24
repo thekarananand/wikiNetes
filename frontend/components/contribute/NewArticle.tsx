@@ -1,6 +1,3 @@
-// Next Components
-import Link from "next/link";
-
 // Runtime Varibles
 import ClientSideEndpoint from "@/runtime_variables/ClientSideEndpoint";
 
@@ -15,7 +12,8 @@ const NewArticle = async () => {
             reqURL     = { ClientSideEndpoint + "/api/articles/new/" }
             title      = { "" }
             author     = { "" }
-            md_content = { "" } />
+            md_content = { "" }
+            heading    = { "Create a new Article" } />
     );
 
 };

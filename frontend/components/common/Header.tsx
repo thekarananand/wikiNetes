@@ -1,22 +1,53 @@
+"use client";
+
 // Next Components
 import Link  from "next/link";
+import Image from "next/image";
 
 // Styling
 import "./Header.style.css";
 
+// UI Components
+import Logo from "@/components/common/Logo";
+
+
+var ColorScheme = "dark";
+
 const Header = () => {
+
+    // const [ ColorScheme, setColorScheme ] = useState("light")
+
+    // const SwitchColorScheme = () => {
+    //     if (ColorScheme === "light") { ColorScheme = "dark"; }
+    //     else if (ColorScheme === "dark") { ColorScheme = "light"; }
+    // };
+
     return (
-        <header>
-            <ul>
-                <li>
-                    <Link href='/'>Wikinetes</Link>
-                </li>
-                <li>
-                    <Link href='/contribute/new/'>Contribute</Link>
-                </li>
-            </ul>
+        <header className="header">
+            <div className="first_nav">
+                <Link href='/'>
+                    <Logo />
+                </Link>
+            </div>  
+
+            <div className="second_nav">
+                <nav>
+                    <ul>
+                        <li>
+                            <Link href='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link href='/contribute/'>Contribute</Link>
+                        </li>
+                        {/* <li>
+                            <button onClick={ SwitchColorScheme }
+                            >Darkmade</button>
+                        </li> */}
+                    </ul>
+                </nav>
+            </div>  
         </header>
     );
 };
 
-export default Header;
+export { Header, ColorScheme };

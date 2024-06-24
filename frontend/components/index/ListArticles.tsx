@@ -22,16 +22,21 @@ const ListArticles = async () => {
     await getArticlesList();
 
     return (
-        <ul>
-            { articleList.map( ( article:{id:string, title:string, author:string}, index: number ) => (
-                <li key={index}>
-                    <Link href={"./wiki/" + article.id}>
-                        <h3 className="title">{article.title}</h3>
-                        <p className="author">{article.author}</p>
-                    </Link>
-                </li>
-            ))}
-        </ul>
+        <section className="ListArticles">
+            <div className="wrapper">
+                <h2>Featured Articles</h2>
+                <ul>
+                    { articleList.map( ( article:{id:string, title:string, author:string}, index: number ) => (
+                        <li key={index}>
+                            <Link href={"./wiki/" + article.id}>
+                                <h3 className="title">{article.title}</h3>
+                                <p className="author">{article.author}</p>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </section>
     );
 
 };

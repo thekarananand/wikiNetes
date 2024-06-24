@@ -6,6 +6,8 @@ import NewArticle from "@/components/contribute/NewArticle";
 
 export default function Page() {
     return (
-        <NewArticle/>
+        <main>
+            <NewArticle/>
+        </main>
     );
 }

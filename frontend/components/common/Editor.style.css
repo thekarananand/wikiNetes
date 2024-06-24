@@ -1,0 +1,69 @@
+main.editArticle > .wrapper {
+    display: grid;
+    grid-template-columns: max-content auto;
+    height: 100%;
+    gap: var(--inner-gap);
+}
+
+main.editArticle > .wrapper * { display: block; }
+
+main.editArticle > .wrapper > * {
+    display: grid;
+    grid-template-rows: max-content auto;
+    gap: var(--inner-gap);
+}
+
+main.editArticle > .wrapper > * > * {
+    background-color: hsl(var(--bg-2));
+    border-radius: var(--radius);
+    padding: var(--side-gap);
+    box-shadow: var(--shadow-1000);
+}
+
+main.editArticle > .wrapper h3 {
+    padding-bottom: 1ch;
+}
+
+main.editArticle section {
+    width: var(--width-readable);
+}
+
+main.editArticle section label {
+    font-size: 1.2em;
+    margin-bottom: 0.5ch;
+}
+
+main.editArticle section .metadata label{
+    margin-top: 1ch;
+}
+
+main.editArticle section input ,
+main.editArticle section textarea {
+    font-size: 1.1em;
+    resize: none;
+    border: none;
+    background-color: hsla(var(--bg-1));
+    padding: 1ch 0.75em;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    width: 100%;
+}
+
+main.editArticle section .editor {
+    display: grid;
+    grid-template-rows: max-content auto;
+}
+
+main.editArticle section input:focus ,
+main.editArticle section textarea:focus {
+    border-bottom: 2px solid hsla(var(--color-link), 0.9);
+    background-color: hsla(var(--color-link), 0.1);
+}
+
+main.editArticle aside .related-bar {
+    height: max-content;
+}
+
+main.editArticle aside .related-bar a {
+    font-size: 1.1rem;
+}

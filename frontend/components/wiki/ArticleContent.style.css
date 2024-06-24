@@ -1,0 +1,117 @@
+main.articleView > .wrapper {
+    display: grid;
+    grid-template-columns: max-content auto;
+    gap: var(--side-gap);
+}
+
+main.articleView > .wrapper > aside {
+    max-width: 40ch;
+    min-width: 40ch;
+    margin-block: 40px;
+    align-self: start;
+    display: grid;
+    gap: var(--side-gap);
+    height: max-content;
+    position: sticky;
+    top: 40px;
+}
+
+main.articleView > .wrapper > aside > * {
+    background-color: hsl(var(--bg-2));
+    padding: var(--side-gap);
+    box-shadow: var(--shadow-1000);
+    border-radius: var(--radius);
+    padding-bottom: 2ch;
+}
+
+
+main.articleView > .wrapper > aside h2{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+main.articleView > .wrapper > aside > .article-header-bar h2{
+    padding-bottom: 2ch;
+    font-size: 1.4em;
+}
+
+main.articleView > .wrapper > aside > .article-header-bar span{
+    color: hsla(var(--color-1), 0.7);
+}
+ 
+main.articleView > .wrapper > aside > .table-bar h2{
+    padding-bottom: 1ch;
+}
+
+
+
+main.articleView > .wrapper > aside > .table-bar ol{
+    padding-left: 2ch;
+    display: grid;
+    gap: 0.5ch;
+}
+
+main.articleView > .wrapper > aside > .table-bar ol li{
+    line-height: 140%;
+    padding-block: 2px;
+    color: hsla(var(--color-1), 0.7);
+}
+
+
+
+.article {
+    max-width: var(--width-readable);
+    padding: 40px;
+    margin: 40px auto;
+    background-color: hsl(var(--bg-2));
+    box-shadow: var(--shadow-1000);
+    border: 1px solid hsla(var(--color-2), 0.75); 
+
+}
+
+.article-header {
+    border-bottom: 1px solid hsla(var(--color-2), 0.5); 
+    margin-bottom: var(--side-gap);
+    padding-bottom: 2ch;
+}
+
+.article .article-header h1 {
+    font-size: 2.5em;
+    text-align: start;
+    text-wrap: balance;
+    margin-bottom: 1rem;
+    line-height: 1.3em;
+}
+
+
+.article-header .metadata span {
+    text-decoration: underline;
+}
+
+
+.article p,
+.article li {
+    line-height: 140%;
+    margin-block: 1.1ch;
+    font-size: 1.125em;
+    color: hsla(var(--color-1), 0.7);
+}
+
+.article h2,
+.article h3,
+.article h4,
+.article h5 {
+    font-weight: 600;
+    margin-block: 2.5rem 1rem;
+    text-align: start;
+    text-wrap: balance;
+}
+
+.article h2 { font-size: 1.6em; }
+.article h3 { font-size: 1.4em; }
+.article h4 { font-size: 1.2em; }
+
+.article ul {
+    margin-left: 3ch;
+    list-style-type: disc;
+}

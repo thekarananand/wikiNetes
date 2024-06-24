@@ -27,7 +27,8 @@ const EditArticle = async ( props: { id :string } ) => {
             reqURL     = { ClientSideEndpoint + `/api/articles/${ props.id }/` }
             title      = { ArticleContent.title }
             author     = { ArticleContent.author }
-            md_content = { ArticleContent.md_content } />
+            md_content = { ArticleContent.md_content }
+            heading    = { "Edit Article" } />
     );
 
 };
