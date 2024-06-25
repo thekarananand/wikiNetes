@@ -1,6 +1,3 @@
-// Next Components
-import Link from "next/link";
-
 // Runtime Varibles
 import ServerSideEndpoint from "@/runtime_variables/ServerSideEndpoint";
 import ClientSideEndpoint from "@/runtime_variables/ClientSideEndpoint";

@@ -21,7 +21,7 @@ section.ListArticles li a {
     display: block;
     border: 1px solid hsl(var(--color-2), 0.6);
     border-radius: var(--radius);
-    background-color: hsla(var(--color-2), 0.12);
+    background-color: hsla(var(--color-2), 0.08);
     text-decoration: none;
     box-shadow: var(--shadow-1000);
 }

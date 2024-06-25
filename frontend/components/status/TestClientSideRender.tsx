@@ -32,7 +32,7 @@ const TestClientSideRender = ( props: { id:number } ) => {
 
     return (
         <li className={ status_box_className } key={ props.id }>
-            <span className="title">Client Side Render</span>
+            <span className="title">Client Side Fetch & Render</span>
             <span className="status">{ status }</span>
         </li>
     );

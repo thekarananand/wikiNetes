@@ -1,6 +1,3 @@
-// Styling
-import "./page.style.css";
-
 // UI Components
 import ArticleContent from "@/components/wiki/ArticleContent";
 

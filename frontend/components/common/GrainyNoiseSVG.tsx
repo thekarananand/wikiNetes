@@ -1,31 +1,31 @@
 const GrainyNoiseSVG = () => {
-  return (
-    <svg>
-        <filter id='noiseFilter'>
+    return (
+        <svg>
+            <filter id='noiseFilter'>
             
-            <feTurbulence
-                type='fractalNoise'
-                baseFrequency='0.65'
-                stitchTiles='stitch' />
+                <feTurbulence
+                    type='fractalNoise'
+                    baseFrequency='0.65'
+                    stitchTiles='stitch' />
 
-            <feColorMatrix
-                in="colorNoise"
-                type="matrix"
-                values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
+                <feColorMatrix
+                    in="colorNoise"
+                    type="matrix"
+                    values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0" />
 
-            <feComposite
-                operator="in"
-                in2="SourceGraphic"
-                result="monoNoise" />
+                <feComposite
+                    operator="in"
+                    in2="SourceGraphic"
+                    result="monoNoise" />
 
-            <feBlend
-                in="SourceGraphic"
-                in2="monoNoise"
-                mode="screen" />
+                <feBlend
+                    in="SourceGraphic"
+                    in2="monoNoise"
+                    mode="screen" />
 
-        </filter>
-    </svg>
-  )
-}
+            </filter>
+        </svg>
+    );
+};
 
-export default GrainyNoiseSVG
+export default GrainyNoiseSVG;

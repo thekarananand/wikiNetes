@@ -39,12 +39,6 @@ main.articleView > .wrapper > aside > .article-header-bar span{
     color: hsla(var(--color-1), 0.7);
 }
  
-main.articleView > .wrapper > aside > .table-bar h2{
-    padding-bottom: 1ch;
-}
-
-
-
 main.articleView > .wrapper > aside > .table-bar ol{
     padding-left: 2ch;
     display: grid;
@@ -55,6 +49,11 @@ main.articleView > .wrapper > aside > .table-bar ol li{
     line-height: 140%;
     padding-block: 2px;
     color: hsla(var(--color-1), 0.7);
+}
+
+main.articleView > .wrapper > aside h3 {
+    padding-bottom: 1ch;
+    font-weight: 500;
 }
 
 

@@ -14,8 +14,6 @@ const ArticleContent = async ( props: { id:string } ) => {
     if (response.ok) {
         let article = await response.json();
 
-        console.log(article)
-
         return (
             <div className="wrapper">
                 <aside>
@@ -28,7 +26,7 @@ const ArticleContent = async ( props: { id:string } ) => {
                         </div>
                     </div>
                     <div className="table-bar">
-                        <h2>Table of Content</h2>
+                        <h3>Table of Content</h3>
                         <ol>
                             { article.table_of_content.map( ( content:string, index: number ) => (
                                 <li key={index}>
@@ -38,6 +36,7 @@ const ArticleContent = async ( props: { id:string } ) => {
                         </ol>
                     </div>
                     <div className="option-bar">
+                        <h3>Actions</h3>
                         <Link className="btn" href={ `/wiki/${ props.id }/edit` } >Edit this Article</Link>
                     </div>
                 </aside>

@@ -15,10 +15,10 @@
 
     --width-readable: min( 
         80ch, 
-        calc( 100vw - 2 * var(--side-gap))    
+        calc( 100vw - 4 * var(--side-gap))    
     );
 
-    --shadow-1000: 0px 3px 9px #00000020, 0px 1px 3px #00000010;
+    --shadow-1000: 0px 3px 9px #00000016, 0px 1px 3px #00000008;
 
 }
 
@@ -40,7 +40,7 @@ body[data-color-scheme="light"] {
 }
 
 body[data-color-scheme="dark"] {
-    --bg-1    : 0, 0%, 5%;
+    --bg-1    : 0, 0%, 8%;
     --bg-2    : 0, 0%, 12%;
     --color-1 : 0, 0%, 100%;
     --color-2 : 0, 3%, 50%;

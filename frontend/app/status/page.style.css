@@ -1,27 +1,29 @@
-.main {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+main.status {
+    background-color: hsl(var(--bg-2));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1000);
+    padding: var(--side-gap);
+}
+
+main.status > .wrapper {
+    width: var(--width-readable);
+    margin: auto;
 }
 
 h1.page-heading {
     display: block;
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-block: 1ch;
     width: 370px;
     text-align: start;
-    padding-inline: 5px;
 }
 
 ul.grid {
     display: grid;
     box-sizing: border-box;
     font-size: 1em;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    width: 370px;
+    gap: 1rem;
+    /* width: 370px; */
     list-style-type: none;
 }

@@ -3,6 +3,7 @@ import React from "react";
 const Logo = () => {
     return (
         <svg
+            aria-label="wikiNetes"
             version="1.1"
             viewBox="0 0 100 21"
             id="layer"
@@ -10,6 +11,9 @@ const Logo = () => {
             y="0px"
             width="123"
             height="25">
+
+            <title>wikiNetes</title>
+            <desc>A Modern, Cloud-Native, Encyclopedia App </desc>
  
             <path
                 id="logo"

@@ -8,13 +8,15 @@ import TestDBConnect        from "@/components/status/TestDBConnect";
 
 export default function Page() {
     return (
-        <main className="main">
-            <h1 className="page-heading">Current Status</h1>
-            <ul className="grid">
-                <TestServerSideRender id={ 1 } />
-                <TestClientSideRender id={ 2 } />
-                <TestDBConnect        id={ 3 } />
-            </ul>
+        <main className="status">
+            <div className="wrapper">
+                <h1 className="page-heading">Current Status</h1>
+                <ul className="grid">
+                    <TestServerSideRender id={ 1 } />
+                    <TestClientSideRender id={ 2 } />
+                    <TestDBConnect        id={ 3 } />
+                </ul>
+            </div>
         </main>
     );
 }

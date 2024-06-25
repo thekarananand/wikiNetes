@@ -21,6 +21,10 @@ main.editArticle > .wrapper > * > * {
 }
 
 main.editArticle > .wrapper h3 {
+    font-weight: 500;
+}
+
+main.editArticle aside h3 {
     padding-bottom: 1ch;
 }
 
@@ -29,12 +33,12 @@ main.editArticle section {
 }
 
 main.editArticle section label {
-    font-size: 1.2em;
-    margin-bottom: 0.5ch;
+    font-size: 1em;
+    margin-bottom: 1ch;
 }
 
 main.editArticle section .metadata label{
-    margin-top: 1ch;
+    margin-top: 2ch;
 }
 
 main.editArticle section input ,

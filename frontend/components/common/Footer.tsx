@@ -13,7 +13,7 @@ const Footer = () => {
                         <Link href={ "/status/" }>Status</Link>
                     </li>
                     <li>
-                        <Link href={ "/md/" }>Markdown</Link>
+                        <Link href={ "/md/" }>Markdown Support</Link>
                     </li>
                     <li>
                         <Link href={ "https://github.com/thekarananand/wikiNetes/" }>GitHub</Link>
