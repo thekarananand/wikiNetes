@@ -126,7 +126,7 @@ A Horizontal Rule represents a break between paragraph-level elements. Following
 <p>
 We welcome code contributions from the community to help us build a better Markdown engine for wikiNetes. Please Visit Contribute Page.
 </p>
-`
+`;
 
 export default function Page() {
     return (

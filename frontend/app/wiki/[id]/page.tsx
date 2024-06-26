@@ -21,11 +21,11 @@ export default async function Page({ params }: { params: { id: string } }) {
                     html_content={ article.html_content }
                 />
             </main>
-        )
+        );
     }
     else {
         return (
             <div>404: Not Found</div>
-        )
+        );
     }
 }

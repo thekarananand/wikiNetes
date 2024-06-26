@@ -30,47 +30,47 @@ const ArticleContent = async ( props: {
 
                 {
                     props?.table_of_content && (
-                    <div className="table-bar">
-                        <h3>Table of Content</h3>
-                        <ol>     
-                            {
-                                props.table_of_content.map( ( content:string, index: number ) => (
-                                    <li key={index}>
-                                        { content }
-                                    </li>))
-                            }
-                        </ol>
-                    </div> )
+                        <div className="table-bar">
+                            <h3>Table of Content</h3>
+                            <ol>     
+                                {
+                                    props.table_of_content.map( ( content:string, index: number ) => (
+                                        <li key={index}>
+                                            { content }
+                                        </li>))
+                                }
+                            </ol>
+                        </div> )
                 }
 
                 {
                     props?.id && (
-                    <div className="option-bar">
-                        <h3>Actions</h3>
-                        <Link
-                            className="btn"
-                            href={ `/wiki/${ props.id }/edit` }
+                        <div className="option-bar">
+                            <h3>Actions</h3>
+                            <Link
+                                className="btn"
+                                href={ `/wiki/${ props.id }/edit` }
                             >Edit this Article</Link>
-                    </div> )
+                        </div> )
                 }
-                </aside>
+            </aside>
                 
-                <section className={ "article " + jetbrains_mono.variable }>
+            <section className={ "article " + jetbrains_mono.variable }>
 
-                    <div className="article-header">
-                        <h1>{ props.title }</h1>
+                <div className="article-header">
+                    <h1>{ props.title }</h1>
 
-                        <div className='metadata'>
+                    <div className='metadata'>
                             Written by: <span>{ props.author }</span>
-                        </div>
                     </div>
+                </div>
 
-                    <div
-                        className="article-body"
-                        dangerouslySetInnerHTML={ { __html: props.html_content } } />
-                </section>
-            </div>
-        );
+                <div
+                    className="article-body"
+                    dangerouslySetInnerHTML={ { __html: props.html_content } } />
+            </section>
+        </div>
+    );
 
 };
 
