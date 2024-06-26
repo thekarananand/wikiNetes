@@ -67,6 +67,7 @@ const Editor = ( props: {
                         type="text"
                         className={inter.className}
                         value={title}
+                        placeholder="Title"
                         onChange={(e) => setTitle(e.target.value)} />
 
                     <label htmlFor="author">Author</label>
@@ -76,6 +77,7 @@ const Editor = ( props: {
                         type="text"
                         className={inter.className}
                         value={author}
+                        placeholder="Author"
                         onChange={(e) => setAuthor(e.target.value)} />
                 </div>
                 <div className="editor">
@@ -85,6 +87,7 @@ const Editor = ( props: {
                         id="md_content"
                         className={jetbrain_mono.className}
                         onChange={(e) => setMD_content(e.target.value)}
+                        placeholder="Type your article here..."
                         value={md_content}/>
                 </div>
             </section>

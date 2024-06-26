@@ -26,16 +26,6 @@ header.header * {
     display: block;
 }
 
-header.header .first_nav a{
-    cursor: pointer;
-    padding-inline: calc(var(--inner-gap) );
-    border-radius: calc( 0.5 * var(--radius) );
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
 header.header .first_nav svg {
     margin-block: auto;
 }
@@ -58,16 +48,30 @@ header.header nav > ul {
 /* header.header nav > ul > li {
 } */
 
-header.header nav > ul > li a{
+header.header a {
+    cursor: pointer;
+    border: 1px solid transparent;
     color: hsl(var(--color-1));
     text-decoration: none;
     font-weight: 500;
+}
+
+header.header .first_nav a{
+    padding-inline: calc(var(--inner-gap) );
+    border-radius: calc( 0.5 * var(--radius) );
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+header.header nav > ul > li a{
     letter-spacing: 0.4px;
     padding: var(--inner-gap);
     border-radius: calc( var(--radius) / 2 );
-
 }
-header.header .first_nav a:hover,
-header.header nav > ul > li a:hover {
+header.header a:hover {
     background-color: hsla(var(--color-link), 0.1);
+    border: 1px solid hsla(var(--color-1), 0.3  );
+    outline: none;
 }

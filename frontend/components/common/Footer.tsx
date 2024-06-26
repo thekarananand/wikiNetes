@@ -16,7 +16,10 @@ const Footer = () => {
                         <Link href={ "/md/" }>Markdown Support</Link>
                     </li>
                     <li>
-                        <Link href={ "https://github.com/thekarananand/wikiNetes/" }>GitHub</Link>
+                        <Link
+                            href={ "https://github.com/thekarananand/wikiNetes/" }
+                            target="_blank"
+                        >GitHub</Link>
                     </li>
                 </ul>
             </nav>

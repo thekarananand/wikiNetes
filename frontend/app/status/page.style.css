@@ -24,6 +24,5 @@ ul.grid {
     box-sizing: border-box;
     font-size: 1em;
     gap: 1rem;
-    /* width: 370px; */
     list-style-type: none;
 }
