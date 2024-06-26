@@ -14,7 +14,7 @@ import "./Editor.style.css";
 
 // Fonts
 import { inter } from "@/fonts/Inter";
-import { jetbrain_mono } from "@/fonts/Jetbrains_Mono";
+import { jetbrains_mono } from "@/fonts/Jetbrains_Mono";
 
 const Editor = ( props: {
     reqMethod   :string,
@@ -85,7 +85,7 @@ const Editor = ( props: {
                     <textarea
                         name="md_content"
                         id="md_content"
-                        className={jetbrain_mono.className}
+                        className={jetbrains_mono.className}
                         onChange={(e) => setMD_content(e.target.value)}
                         placeholder="Type your article here..."
                         value={md_content}/>

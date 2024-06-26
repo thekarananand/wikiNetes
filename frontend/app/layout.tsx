@@ -6,7 +6,7 @@ import "./globals.css";
 
 // Fonts
 import { inter } from "@/fonts/Inter";
-import { jetbrain_mono } from "@/fonts/Jetbrains_Mono";
+import { jetbrains_mono } from "@/fonts/Jetbrains_Mono";
 
 // UI Components
 import { Header, ColorScheme } from "@/components/common/Header";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="en">
-            <body className={inter.className}
+            <body className={inter.className }
                 data-color-scheme={ ColorScheme }>
                 <Header/>
                 {children}
