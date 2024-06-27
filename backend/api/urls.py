@@ -3,6 +3,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('',                           views.pingBackend,      name='pingBackendAtIndexRoute'   ),
     path('ping/backend/',              views.pingBackend,      name='pingBackend'   ),
     path('ping/database/',             views.pingDatabase,     name='pingDatabase'  ),
 

@@ -16,12 +16,14 @@ export default function Page() {
                         </Link>
                     </li>
                     <li>
-                        <Link href={ "/https://github.com/thekarananand/wikiNetes/" }>
+                        <Link href={ "https://github.com/thekarananand/wikiNetes/" }
+                            target="_blank">
                             Help Us Build: Contribute Code
                         </Link>
                     </li>
                     <li>
-                        <Link href={ "/https://github.com/thekarananand/wikiNetes/" }>
+                        <Link href={ "https://github.com/thekarananand/wikiNetes/" }
+                            target="_blank">
                             Report a Bug or Suggest a Feature:
                             Raise an Issue on GitHub
                         </Link>

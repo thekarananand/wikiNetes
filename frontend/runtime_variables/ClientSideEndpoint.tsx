@@ -1,2 +1,2 @@
-const ClientSideEndpoint:String = "http://localhost:8000";
+const ClientSideEndpoint:String = "http://localhost:80";
 export default ClientSideEndpoint;

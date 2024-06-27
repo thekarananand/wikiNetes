@@ -1,14 +1,12 @@
 services:
   database:
-    container_name: mongo
+    container_name: wikinetes-database
     image: mongo
-    ports:
-      - 27017:27017
     networks:
       - wikinetes
 
   database-init-container:
-    container_name: mongo-init-container
+    container_name: wikinetes-database-init-container
     build: ./database
     restart: no
     depends_on:
@@ -17,23 +15,48 @@ services:
       - wikinetes
 
   backend:
-    container_name: wikinetes-backend
     build: ./backend
-    ports:
-      - 8000:8000
     networks:
       - wikinetes
     depends_on:
       - database
+    deploy:
+      replicas: 3
 
-  frontend:
-    container_name: wikinetes-frontend
-    build: ./frontend
-    ports:
-      - 3000:3000
+  backend-loadbalancer:
+    container_name: wikinetes-backend-loadbalancer
+    build: ./nginx/backend-loadbalancer
     depends_on:
       - backend
-      - database
+    networks:
+      - wikinetes
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+      - backend-loadbalancer
+    networks:
+      - wikinetes
+    deploy:
+      replicas: 3
+
+  frontend-loadbalancer:
+    container_name: wikinetes-frontend-loadbalancer
+    build: ./nginx/frontend-loadbalancer
+    depends_on:
+      - frontend
+    networks:
+      - wikinetes
+
+  reverse-proxy:
+    container_name: wikinetes-reverse-proxy
+    build: ./nginx/reverse-proxy
+    ports:
+      - 80:80
+    depends_on:
+      - backend-loadbalancer
+      - frontend-loadbalancer
     networks:
       - wikinetes
 

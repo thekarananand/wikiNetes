@@ -1,7 +1,7 @@
 import pymongo
 
 # Create MongoClient to connect to Mongo Container
-mongo_container = pymongo.MongoClient( 'mongo' , 27017 )
+mongo_container = pymongo.MongoClient( 'wikinetes-database' , 27017 )
 
 # Create DB
 db_wikinetes = mongo_container["wikinetes"]

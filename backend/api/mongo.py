@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 from .md2html import md2html
 
 # Connect to Mongo Container
-mongo_container = pymongo.MongoClient( 'mongo' , 27017 )
+mongo_container = pymongo.MongoClient( 'wikinetes-database' , 27017 )
 
 # Access DB
 db_wikinetes = mongo_container["wikinetes"]

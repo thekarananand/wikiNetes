@@ -1,3 +1,2 @@
-// const ServerSideEndpoint:String = "http://wikinetes-backend:8000";
-const ServerSideEndpoint:String = "http://localhost:8000";
+const ServerSideEndpoint:String = "http://wikinetes-backend-loadbalancer:80";
 export default ServerSideEndpoint;
