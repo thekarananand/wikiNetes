@@ -2,7 +2,7 @@
 
 A Modern, Cloud-Native, Encyclopedia App 
 
-![WikiNetes Application Layout](./docs/appLayout.svg)
+![WikiNetes Application Layout](./docs/composeLayout.svg)
 <div align='center'><i>fig: WikiNetes Application Layout</i></div>
 
 
@@ -15,6 +15,8 @@ A Modern, Cloud-Native, Encyclopedia App
 	+ PyMongo
 
 - **Database** : MongoDB
+
+- **Load Balancer & Reverse Proxy** : Nginx
 
 ## WikiNetes in Action
 

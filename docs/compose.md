@@ -16,4 +16,4 @@ cd ./wikiNetes
 docker compose up -d --build
 ```
 
-**Step 3**: Go to [localhost:3000/status](http://localhost:3000/status), and Check, if all the components are Operation.
+**Step 3**: It's Ready, Go to [localhost:80](http://localhost:80).
