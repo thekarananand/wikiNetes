@@ -1,6 +1,4 @@
-FROM alpine:latest
-
-RUN apk add npm
+FROM node:lts-slim
 
 COPY . /opt/wikiNetes/frontend
 
