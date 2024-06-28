@@ -2,7 +2,7 @@
 
 A Modern, Cloud-Native, Encyclopedia App 
 
-![WikiNetes Application Layout](./docs/composeLayout.svg)
+![WikiNetes Application Layout](./docs/composeLayout.png)
 <div align='center'><i>fig: WikiNetes Application Layout</i></div>
 
 

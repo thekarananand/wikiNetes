@@ -1,6 +1,6 @@
 # WikiNetes on Docker Compose
 
-![WikiNetes Application Layout](./composeLayout.svg)
+![WikiNetes Application Layout](./composeLayout.png)
 <div align='center'><i>fig: WikiNetes Application Layout on Docker Compose </i></div>
 
 ## Steps to deploy on Docker Compose
