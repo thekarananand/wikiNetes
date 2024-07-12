@@ -1,0 +1,75 @@
+name: wikinetes
+
+services:
+  database:
+    container_name: wikinetes-database
+    image: mongo
+    networks:
+      - wikinetes
+
+  database-init-container:
+    container_name: wikinetes-database-init-container
+    image: thekarananand/wikinetes-database-init-container
+    restart: no
+    depends_on:
+      - database
+    environment:
+      - WIKINETES_DB=wikinetes-database
+    networks:
+      - wikinetes
+
+  backend:
+    image: thekarananand/wikinetes-backend
+    networks:
+      - wikinetes
+    depends_on:
+      - database
+    environment:
+      - WIKINETES_DB=wikinetes-database
+    deploy:
+      replicas: 3
+
+  backend-loadbalancer:
+    container_name: wikinetes-backend-loadbalancer
+    image: thekarananand/wikinetes-backend-loadbalancer
+    depends_on:
+      - backend
+    networks:
+      - wikinetes
+
+  frontend:
+    image: thekarananand/wikinetes-frontend
+    depends_on:
+      - backend
+      - backend-loadbalancer
+    networks:
+      - wikinetes
+    environment:
+      - WIKINETES_CLIENT_API=http://localhost:80
+      - WIKINETES_SERVER_API=http://wikinetes-backend-loadbalancer:80
+      - WIKINETES_THEME=dark
+    deploy:
+      replicas: 3
+
+  frontend-loadbalancer:
+    container_name: wikinetes-frontend-loadbalancer
+    image: thekarananand/wikinetes-frontend-loadbalancer
+    depends_on:
+      - frontend
+    networks:
+      - wikinetes
+
+  reverse-proxy:
+    container_name: wikinetes-reverse-proxy
+    image: thekarananand/wikinetes-reverse-proxy
+    ports:
+      - 80:80
+    depends_on:
+      - backend-loadbalancer
+      - frontend-loadbalancer
+    networks:
+      - wikinetes
+
+networks:
+  wikinetes:
+    name: wikinetes
