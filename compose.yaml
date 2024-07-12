@@ -11,6 +11,8 @@ services:
     restart: no
     depends_on:
       - database
+    environment:
+      - WIKINETES_DB=wikinetes-database
     networks:
       - wikinetes
 

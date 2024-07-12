@@ -1,7 +1,8 @@
 import pymongo
+import os
 
 # Create MongoClient to connect to Mongo Container
-mongo_container = pymongo.MongoClient( 'wikinetes-database' , 27017 )
+mongo_container = pymongo.MongoClient( os.environ['WIKINETES_DB'] , 27017 )
 
 # Create DB
 db_wikinetes = mongo_container["wikinetes"]
@@ -39,7 +40,7 @@ The quest for "pure" water, then, involves removing these unwanted elements to a
 - **Public water systems** treat water using a multi-step approach, typically employing filtration, coagulation, disinfection, and sometimes additional processes like reverse osmosis. This ensures its compliance with national or regional drinking water quality standards.
 - **Bottled water** undergoes filtration and purification processes, which can vary across brands and sources. While often marketed as "pure," it's essential to scrutinize labels and understand the treatment methods used.
 - **Home filtration systems** offer varying levels of purification, from carbon filters targeting chlorine and taste impurities to reverse osmosis systems removing a wider range of contaminants. Choosing the right system depends on your specific water quality concerns and local regulations.
-        
+
 # Beyond Purity: Understanding the Human Factor
 
 Even "pure" water isn't a guarantee of absolute safety. Contamination can occur after treatment, during storage, or even within our own homes through pipes and storage containers. It's crucial to practice good hygiene and proper water handling techniques to minimize risks.
