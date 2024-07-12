@@ -1,2 +1,2 @@
-const ClientSideEndpoint:String = "http://localhost:80";
+const ClientSideEndpoint = process.env.WIKINETES_CLIENT_API;
 export default ClientSideEndpoint;

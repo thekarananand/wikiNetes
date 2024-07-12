@@ -1,2 +1,2 @@
-const ServerSideEndpoint:String = "http://wikinetes-backend-loadbalancer:80";
+const ServerSideEndpoint = process.env.WIKINETES_SERVER_API;
 export default ServerSideEndpoint;

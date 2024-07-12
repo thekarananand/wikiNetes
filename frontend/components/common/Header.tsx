@@ -7,11 +7,11 @@ import Image from "next/image";
 // Styling
 import "./Header.style.css";
 
+// Runtime Varibles
+import ColorScheme from "@/runtime_variables/ColorScheme";
+
 // UI Components
 import Logo from "@/components/common/Logo";
-
-
-var ColorScheme = "dark";
 
 const Header = () => {
 
