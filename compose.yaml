@@ -10,7 +10,7 @@ services:
     build: ./database
     restart: no
     depends_on:
-      - database   
+      - database
     networks:
       - wikinetes
 
@@ -20,6 +20,8 @@ services:
       - wikinetes
     depends_on:
       - database
+    environment:
+      - WIKINETES_DB=wikinetes-database
     deploy:
       replicas: 3
 
@@ -38,6 +40,10 @@ services:
       - backend-loadbalancer
     networks:
       - wikinetes
+    environment:
+      - WIKINETES_CLIENT_API=http://localhost:80
+      - WIKINETES_SERVER_API=http://wikinetes-backend-loadbalancer:80
+      - WIKINETES_THEME=dark
     deploy:
       replicas: 3
 

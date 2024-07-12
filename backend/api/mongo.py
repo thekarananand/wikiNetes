@@ -1,10 +1,11 @@
 import pymongo
 from bson.objectid import ObjectId
+import os
 
 from .md2html import md2html
 
 # Connect to Mongo Container
-mongo_container = pymongo.MongoClient( 'wikinetes-database' , 27017 )
+mongo_container = pymongo.MongoClient( os.environ['WIKINETES_DB'] , 27017 )
 
 # Access DB
 db_wikinetes = mongo_container["wikinetes"]
@@ -14,7 +15,7 @@ collection_articles = db_wikinetes["articles"]
 collection_status   = db_wikinetes["status"]
 
 def pingDatabase():
-    
+
     query = { }
 
     projection = {
@@ -23,13 +24,13 @@ def pingDatabase():
     }
 
     status = collection_status.find_one( query, projection )
-    
+
     return(status)
 
 def articlesList():
 
     query = { }
-    
+
     projection = {
         '_id': True,
         'title': True,
